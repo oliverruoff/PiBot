@@ -20,7 +20,7 @@ The goal of PiBot is to be a small robot that can autonomously drive around in t
 ![Circuit Diagram](docs/PiBot_circuit_diagram.png)
 
 ## 3D Model for the robot
-The 3d model of the robot is developed with [Tinkercad](www.tinkercad.com).
+The 3d model of the robot is developed with [Tinkercad](https://www.tinkercad.com/).
 The .stl file(s) will be stored in the [stl](stl) folder of this repository.
 Simply print them out using any 3d printer and start building your PiBot :)
 
