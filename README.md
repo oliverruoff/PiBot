@@ -25,8 +25,8 @@ The .stl file(s) will be stored in the [stl](stl) folder of this repository.
 Simply print them out using any 3d printer and start building your PiBot :)
 
 ## Instructions on how to build the robot
-- circuits 
-- building tips
-- etc.
+- Use circuit diagram to wire everything up 
+- Hot glue is your best friend :D
+- Good luck
 
 ## Instructions on how to use the software
