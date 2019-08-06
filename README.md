@@ -1,6 +1,7 @@
 # PiBot
 A robot using a Raspberry Pi as main unit. 
 
+![PyPi](docs/robot.jpg)
 
 ## What is it
 The goal of PiBot is to be a small robot that can autonomously drive around in the house and maybe in the future to do some more or less useful stuff :D 
@@ -16,7 +17,6 @@ The goal of PiBot is to be a small robot that can autonomously drive around in t
 - [One stepper motor with driver board (or servo)](https://www.amazon.de/gp/product/B01IP7IOGQ)
 
 ## Circuit Diagram
-
 ![Circuit Diagram](docs/PiBot_circuit_diagram.png)
 
 ## 3D Model for the robot
