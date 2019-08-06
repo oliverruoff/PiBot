@@ -5,6 +5,7 @@ A robot using a Raspberry Pi as main unit.
 
 ## What is it
 The goal of PiBot is to be a small robot that can autonomously drive around in the house and maybe in the future to do some more or less useful stuff :D 
+The "eyes" of the robot is an ultra sonic sensor, using the usdar software developed under [Github Usdar](https://github.com/vanslipon/usdar)
 
 ## Parts used
 - [One Raspberry Pi Zero](https://www.amazon.de/Raspberry-Pi-Zero-WH-512/dp/B07C7FHJDX)
