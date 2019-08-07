@@ -1,5 +1,5 @@
 # PiBot
-A robot using a Raspberry Pi as main unit. 
+A robot using a Raspberry Pi Zero W as main unit. 
 
 ![PyPi](docs/robot.jpg)
 
