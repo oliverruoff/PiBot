@@ -10,11 +10,19 @@ ENB = 11
 temp1 = 1
 
 GPIO.setmode(GPIO.BCM)
+
 GPIO.setup(IN1, GPIO.OUT)
 GPIO.setup(IN2, GPIO.OUT)
+GPIO.setup(IN3, GPIO.OUT)
+GPIO.setup(IN4, GPIO.OUT)
 GPIO.setup(ENA, GPIO.OUT)
+GPIO.setup(ENB, GPIO.OUT)
+
 GPIO.output(IN1, GPIO.LOW)
 GPIO.output(IN2, GPIO.LOW)
+GPIO.output(IN3, GPIO.LOW)
+GPIO.output(IN4, GPIO.LOW)
+
 p_a = GPIO.PWM(ENA, 1000)
 p_a.start(0)
 p_b = GPIO.PWM(ENB, 1000)
