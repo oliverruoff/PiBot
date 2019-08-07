@@ -20,7 +20,7 @@ The "eyes" of the robot is an ultra sonic sensor, using the usdar software devel
 - M4 Screws and Nuts
 
 ## Circuit Diagram
-![Circuit Diagram](docs/PiBot_circuit_diagram.png)
+![Circuit Diagram](docs/PiBot_circuit_diagram.jpg)
 
 ## 3D Model for the robot
 The 3d model of the robot is developed with [Tinkercad](https://www.tinkercad.com/).
