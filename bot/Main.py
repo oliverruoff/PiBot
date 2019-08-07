@@ -88,13 +88,13 @@ while(1):
     elif x == 'm':
         print("medium")
         p_a.ChangeDutyCycle(50)
-        p_b.ChangeDutyCycle(25)
+        p_b.ChangeDutyCycle(50)
         x = 'z'
 
     elif x == 'h':
         print("high")
         p_a.ChangeDutyCycle(75)
-        p_b.ChangeDutyCycle(25)
+        p_b.ChangeDutyCycle(75)
         x = 'z'
 
     elif x == 'e':
