@@ -16,6 +16,8 @@ The "eyes" of the robot is an ultra sonic sensor, using the usdar software devel
 - [One Battery holder](https://www.amazon.de/gp/product/B077YC3JX9)
 - [One ultra sonic sensor](https://www.amazon.de/Elegoo-HC-SR04-Ultraschallmodul-Distanzsensor-MEGA2560/dp/B01M9CMJ9O)
 - [One stepper motor with driver board (or servo)](https://www.amazon.de/gp/product/B01IP7IOGQ)
+- Six edged m4 5cm long spacer
+- M4 Screws and Nuts
 
 ## Circuit Diagram
 ![Circuit Diagram](docs/PiBot_circuit_diagram.png)
