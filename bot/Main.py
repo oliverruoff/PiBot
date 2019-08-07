@@ -32,8 +32,27 @@ p_b.ChangeDutyCycle(75)
 
 print("\n")
 print("The default speed & direction of motor is STOP & Forward.....")
-print("s-stop f-forward b-backward e-exit")
+print("s-stop f-forward b-backward r-right l-left e-exit")
 print("\n")
+
+
+def turn_left_wheel(forward=True):
+    if forward:
+        GPIO.output(IN3, GPIO.LOW)
+        GPIO.output(IN4, GPIO.HIGH)
+    else:
+        GPIO.output(IN3, GPIO.HIGH)
+        GPIO.output(IN4, GPIO.LOW)
+
+
+def turn_right_wheel(forward=True):
+    if forward:
+        GPIO.output(IN1, GPIO.HIGH)
+        GPIO.output(IN2, GPIO.LOW)
+    else:
+        GPIO.output(IN1, GPIO.LOW)
+        GPIO.output(IN2, GPIO.HIGH)
+
 
 while(1):
 
@@ -49,19 +68,25 @@ while(1):
 
     elif x == 'f':
         print("forward")
-        GPIO.output(IN1, GPIO.HIGH)
-        GPIO.output(IN2, GPIO.LOW)
-        GPIO.output(IN3, GPIO.LOW)
-        GPIO.output(IN4, GPIO.HIGH)
+        turn_right_wheel()
+        turn_left_wheel()
         x = 'z'
 
     elif x == 'b':
         print("backward")
-        GPIO.output(IN1, GPIO.LOW)
-        GPIO.output(IN2, GPIO.HIGH)
-        GPIO.output(IN3, GPIO.HIGH)
-        GPIO.output(IN4, GPIO.LOW)
+        turn_right_wheel(False)
+        turn_left_wheel(False)
         x = 'z'
+
+    elif x == 'r':
+        print('right')
+        turn_right_wheel(False)
+        turn_left_wheel()
+
+    elif x == 'l':
+        print('left')
+        turn_right_wheel()
+        turn_left_wheel(False)
 
     elif x == 'e':
         GPIO.cleanup()
