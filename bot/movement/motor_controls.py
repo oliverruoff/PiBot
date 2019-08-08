@@ -86,5 +86,5 @@ def turn_degree(degree):
         degree = 360 - degree
         print('Turning', degree, '° to the left :)')
         turn_left()
-    sleep(degree/360*2)  # times to, since bot takes around 2s for 360°
+    sleep(degree/360*2.5)  # times to, since bot takes around 2.5s for 360°
     stop_motors()
