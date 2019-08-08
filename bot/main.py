@@ -1,5 +1,5 @@
 import motor_controls as mc
-import usdar.usdar
+from usdar.usdar import usdar
 
 if __name__ == "__main__":
     usdar.scan360()
