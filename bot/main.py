@@ -22,5 +22,5 @@ if __name__ == "__main__":
     max_dist = distances[[i[2]
                           for i in distances].index(max([i[2]
                                                          for i in distances]))]
-    angle_to_turn = angle((0, 1), (max_dist[0], max_dist[1]))
+    angle_to_turn = math.degrees(angle((0, 1), (max_dist[0], max_dist[1])))
     print('I should turn now:', angle_to_turn, '°.')
