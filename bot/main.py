@@ -1,5 +1,5 @@
 import motor_controls as mc
-from PiBot.bot.usdar.usdar import scan360
+from .usdar.usdar import usdar
 
 if __name__ == "__main__":
     scan360()
