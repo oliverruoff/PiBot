@@ -50,24 +50,41 @@ def turn_right_wheel(forward=True):
         GPIO.output(IN1, GPIO.LOW)
         GPIO.output(IN2, GPIO.HIGH)
 
+
 def turn_left():
     turn_right_wheel()
     turn_left_wheel(False)
+
 
 def turn_right():
     turn_right_wheel(False)
     turn_left_wheel()
 
+
 def move_front():
     turn_right_wheel()
     turn_left_wheel()
 
+
 def move_back():
     turn_right_wheel(False)
     turn_left_wheel(False)
+
 
 def stop_motors():
     GPIO.output(IN1, GPIO.LOW)
     GPIO.output(IN2, GPIO.LOW)
     GPIO.output(IN3, GPIO.LOW)
     GPIO.output(IN4, GPIO.LOW)
+
+
+def turn_degree(degree):
+    if degree < 180:
+        print('Turning', degree, '° to the right :)')
+        turn_right()
+    else:
+        degree = 360 - degree
+        print('Turning', degree, '° to the left :)')
+        turn_left()
+    sleep(degree/360*2)  # times to, since bot takes around 2s for 360°
+    stop_motors()
