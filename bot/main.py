@@ -33,8 +33,8 @@ if __name__ == "__main__":
         mc.turn_degree(angle_to_turn)
         front_dist = us.get_distance()
         print('In front of me there is', front_dist, 'cm space.')
-        if front_dist > 20:
+        if front_dist > 40:
             mc.move_front()
-            while front_dist > 20:
+            while front_dist > 40:
                 front_dist = us.get_distance()
         mc.stop_motors()
