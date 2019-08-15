@@ -1,8 +1,8 @@
 import math
 
 from movement import motor_controls as mc
-from usdar import detection as dt
-from usdar import ultrasonic as us
+from usdar.usdar import detection as dt
+from usdar.usdar import ultrasonic as us
 
 if __name__ == "__main__":
     while True:
