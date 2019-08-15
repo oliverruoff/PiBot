@@ -27,7 +27,6 @@ if __name__ == "__main__":
         else:
             turn_direction = True
         angle_to_turn = get_angle_to_turn(4, turn_direction)
-        reset_us_stepper(512)
         if angle_to_turn < 0:
             angle_to_turn = 360 + angle_to_turn
         print('The most space seems to be at:', angle_to_turn, '°.')
