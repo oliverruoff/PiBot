@@ -1,5 +1,4 @@
 import math
-import threading
 
 from movement import motor_controls as mc
 from usdar.usdar import detection as dt
@@ -23,8 +22,7 @@ def reset_us_stepper(ticks_to_reset):
 if __name__ == "__main__":
     while True:
         angle_to_turn = get_angle_to_turn()
-        t = threading.Thread(target=reset_us_stepper, args=[512])
-        t.start()
+        reset_us_stepper(512)
         if angle_to_turn < 0:
             angle_to_turn = 360 + angle_to_turn
         print('The most space seems to be at:', angle_to_turn, '°.')
