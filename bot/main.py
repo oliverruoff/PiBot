@@ -6,8 +6,8 @@ from usdar.usdar import ultrasonic as us
 from usdar.usdar import stepper as st
 
 
-def get_angle_to_turn():
-    env_map = dt.scan_360()
+def get_angle_to_turn(scan_speed, scan_turn_direction):
+    env_map = dt.scan_360(scan_speed, scan_turn_direction)
     distances = [(x, y, math.sqrt(x*x+y*y)) for x, y in env_map]
     max_dist = distances[[i[2]
                           for i in distances].index(
@@ -19,10 +19,14 @@ def reset_us_stepper(ticks_to_reset):
     st.run_stepper(ticks_to_reset, False)
 
 
-'''
 if __name__ == "__main__":
+    turn_direction = True
     while True:
-        angle_to_turn = get_angle_to_turn()
+        if turn_direction:
+            turn_direction = False
+        else:
+            turn_direction = True
+        angle_to_turn = get_angle_to_turn(4, turn_direction)
         reset_us_stepper(512)
         if angle_to_turn < 0:
             angle_to_turn = 360 + angle_to_turn
@@ -35,21 +39,3 @@ if __name__ == "__main__":
             while front_dist > 20:
                 front_dist = us.get_distance()
         mc.stop_motors()
-'''
-
-if __name__ == "__main__":
-    while True:
-        front_dist = us.get_distance()
-        print('In front of me there is', front_dist, 'cm space.')
-        if front_dist > 40:
-            mc.move_front()
-            while front_dist > 40:
-                front_dist = us.get_distance()
-        elif front_dist < 25 or front_dist > 2000:
-            mc.stop_motors()
-            mc.move_back()
-            while front_dist < 25:
-                front_dist = us.get_distance()
-        else:
-            mc.stop_motors()
-            mc.turn_degree(40)
