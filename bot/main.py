@@ -19,6 +19,7 @@ def reset_us_stepper(ticks_to_reset):
     st.run_stepper(ticks_to_reset, False)
 
 
+'''
 if __name__ == "__main__":
     while True:
         angle_to_turn = get_angle_to_turn()
@@ -33,4 +34,17 @@ if __name__ == "__main__":
             mc.move_front()
             while front_dist > 20:
                 front_dist = us.get_distance()
+        mc.stop_motors()
+'''
+
+if __name__ == "__main__":
+    while True:
+        front_dist = us.get_distance()
+        print('In front of me there is', front_dist, 'cm space.')
+        if front_dist > 40:
+            mc.move_front()
+            while front_dist > 40:
+                front_dist = us.get_distance()
+        else:
+            mc.turn_degree(30)
         mc.stop_motors()
