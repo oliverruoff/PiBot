@@ -45,7 +45,8 @@ if __name__ == "__main__":
             mc.move_front()
             while front_dist > 40:
                 front_dist = us.get_distance()
-        elif front_dist < 25:
+        elif front_dist < 25 or front_dist > 2000:
+            mc.stop_motors()
             mc.move_back()
             while front_dist < 25:
                 front_dist = us.get_distance()
