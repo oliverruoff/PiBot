@@ -46,5 +46,5 @@ if __name__ == "__main__":
             while front_dist > 40:
                 front_dist = us.get_distance()
         else:
-            mc.turn_degree(30)
-        mc.stop_motors()
+            mc.stop_motors()
+            mc.turn_degree(40)
