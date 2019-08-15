@@ -23,7 +23,7 @@ def reset_us_stepper(ticks_to_reset):
 if __name__ == "__main__":
     while True:
         angle_to_turn = get_angle_to_turn()
-        t = threading.Thread(target=reset_us_stepper, args=512)
+        t = threading.Thread(target=reset_us_stepper, args=[512])
         t.start()
         if angle_to_turn < 0:
             angle_to_turn = 360 + angle_to_turn
